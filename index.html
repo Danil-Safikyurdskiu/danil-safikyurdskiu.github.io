@@ -19,6 +19,16 @@
 				About
 			</ul>
 		</div>
+		<div x-data="{open:false}">
+			<button @click="open = true ">About Myself</button>
+			<ul 
+				x-show="open"
+				@click.away="open = false"
+			>
+				Background story
+			</ul>
+		</div>
+		</div>
 		<div x-data="{ tab: 'foo' }">
 			<button :class="{ 'active': tab === 'foo' }" @click="tab = 'foo'">Foo</button>
 			<button :class="{ 'active': tab === 'bar' }" @click="tab = 'bar'">Bar</button>
